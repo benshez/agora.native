@@ -1,0 +1,47 @@
+{
+  "name": "agora.native",
+  "version": "1.0.0",
+  "description": "Agora Agora Native Application",
+  "author": "Ben van Heerden <benshez@gmail.com>",
+  "license": "MIT",
+  "readme": "Agora Native",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benshez/agora"
+  },
+  "nativescript": {
+    "id": "org.nativescript.agoranative",
+    "tns-android": {
+      "version": "3.4.2"
+    }
+  },
+  "dependencies": {
+    "kinvey-nativescript-sdk": "^3.10.0",
+    "lodash": "^4.17.5",
+    "nativescript-accelerometer": "^2.0.1",
+    "nativescript-camera": "^4.0.0",
+    "nativescript-fresco": "^3.0.6",
+    "nativescript-geolocation": "^4.2.3",
+    "nativescript-intl": "^3.0.0",
+    "nativescript-iqkeyboardmanager": "^1.2.0",
+    "nativescript-social-share": "^1.5.0",
+    "nativescript-theme-core": "^1.0.4",
+    "nativescript-ui-autocomplete": "^3.6.0",
+    "nativescript-ui-calendar": "^3.5.0",
+    "nativescript-ui-chart": "^3.5.0",
+    "nativescript-ui-dataform": "^3.5.0",
+    "nativescript-ui-gauge": "^3.5.0",
+    "nativescript-ui-listview": "^3.5.1",
+    "nativescript-ui-sidedrawer": "^3.5.1",
+    "nativescript-vue": "^1.3.1",
+    "tns-core-modules": "^3.4.1",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.4.5",
+    "babel-types": "6.4.5",
+    "babylon": "6.4.5",
+    "lazy": "1.0.11"
+  }
+}
