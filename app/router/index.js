@@ -34,7 +34,7 @@ const routes = new VueRouter({
       }
     },
     {
-      path: '/map/:industry?/:location?',
+      path: '/map',
       component: MapView,
       meta: {
         description: 'Map'

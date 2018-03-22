@@ -47,7 +47,7 @@ const SideDrawerSearchComponent = {
         </StackLayout>
       </StackLayout>
       <StackLayout ~mainContent>
-        <Label :text="mainContentText" textWrap="true" fontSize="13" padding="10" />
+
       </StackLayout>
     </RadSideDrawer>
  `
