@@ -1,5 +1,5 @@
-const SideDrawerComponent = {
-  name: 'side-drawer-component',
+const SideDrawerSearchComponent = {
+  name: 'side-drawer-navigation-component',
   props: {
     mainContentText: '',
     titleText: ''
@@ -53,4 +53,4 @@ const SideDrawerComponent = {
  `
 };
 
-module.exports = SideDrawerComponent;
+module.exports = SideDrawerSearchComponent;

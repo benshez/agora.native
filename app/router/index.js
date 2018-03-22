@@ -7,6 +7,7 @@ const HomeView = require('../views/HomeView');
 const LoginView = require('../views/LoginView');
 const RegisterView = require('../views/RegisterView');
 const NotFoundView = require('../views/NotFoundView');
+const MapView = require('../views/MapView');
 
 const routes = new VueRouter({
   pageRouting: true,
@@ -30,6 +31,13 @@ const routes = new VueRouter({
       component: RegisterView,
       meta: {
         description: 'Register'
+      }
+    },
+    {
+      path: '/map/:industry?/:location?',
+      component: MapView,
+      meta: {
+        description: 'Map'
       }
     },
     {
