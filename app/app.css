@@ -1,1 +1,188 @@
-@import 'nativescript-theme-core/css/core.light.css';
+page {
+  font-size: 15;
+}
+
+page.platform-ios {
+  margin-top: -20;
+}
+
+.list-page {
+  background-image: url('res://bg_inner');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+action-bar {
+  background-color: black;
+  color: white;
+}
+
+text-field {
+  padding: 10;
+  font-size: 13;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.input-field {
+  width: 100%;
+}
+
+.background {
+  background-image: url('res://bg_login');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo-container {
+  horizontal-align: center;
+  height: 80;
+}
+
+.initial-container {
+  margin-top: 250;
+}
+
+.initial-label {
+  color: white;
+  horizontal-align: center;
+  margin-bottom: 80;
+}
+
+.initial-button {
+  background-color: white;
+  color: #cb1d00;
+  height: 45;
+  width: 275;
+  vertical-align: center;
+}
+
+.initial-button-label {
+  horizontal-align: center;
+  font-weight: bold;
+}
+
+.platform-ios .initial-label {
+  font-size: 40;
+  letter-spacing: 0.2;
+}
+
+.platform-android .initial-container {
+  margin-top: 290;
+}
+.platform-android .initial-label {
+  font-size: 36;
+  letter-spacing: 0.35;
+}
+
+.main-container {
+  height: 425;
+  margin-left: 30;
+  margin-right: 30;
+  background-color: white;
+}
+
+.main-label {
+  horizontal-align: center;
+  color: black;
+}
+
+/* Hide a bunch of things to setup the initial animations */
+
+.form-controls,
+.sign-up-stack {
+  opacity: 0;
+}
+
+image {
+  margin-top: 5;
+  margin-bottom: 20;
+}
+
+button,
+TextField {
+  margin-left: 16;
+  margin-right: 16;
+  margin-bottom: 10;
+}
+
+TextField {
+  color: black;
+  placeholder-color: #aca6a7;
+  margin-bottom: 10;
+}
+TextField.light {
+  color: #c4afb4;
+  placeholder-color: #c4afb4;
+}
+
+.submit-button {
+  background-color: #cb1d00;
+  color: white;
+  margin-top: 15;
+}
+
+.forgot-password-label {
+  font-size: 13;
+  margin-left: 20;
+  margin-bottom: 45;
+  color: black;
+}
+
+.sign-up-stack {
+  background-color: #311217;
+}
+.sign-up-stack label {
+  width: 100%;
+  color: white;
+  horizontal-align: center;
+  text-align: center;
+  font-size: 15;
+  height: 48;
+}
+
+.platform-ios .main-container {
+  width: 300;
+}
+.platform-ios .main-label {
+  color: #311217;
+  font-size: 32;
+  margin-top: 45;
+  margin-bottom: 52;
+  letter-spacing: 0.2;
+}
+.platform-ios TextField {
+  border-width: 1;
+  border-color: #6e595c;
+  margin-bottom: 20;
+}
+.platform-ios TextField .light {
+  border-color: #c4afb4;
+}
+
+.submit-button {
+  height: 40;
+}
+
+.platform-android .main-container {
+  width: 275;
+  height: 394;
+}
+.platform-android .main-label {
+  font-size: 28;
+  margin-top: 42;
+  margin-bottom: 32;
+  letter-spacing: 0.3;
+}
+.sign-up-stack label {
+  margin-top: 15;
+  text-transform: uppercase;
+}
+.forgot-password-label {
+  font-size: 13;
+  text-transform: uppercase;
+}

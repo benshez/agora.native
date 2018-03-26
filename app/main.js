@@ -3,6 +3,7 @@ const lodash = require('lodash');
 const VueLodash = require('./utilities/vue-lodash');
 const router = require('./router');
 const store = require('./store');
+const platformModule = require('tns-core-modules/platform');
 
 Vue.registerElement(
   'RadSideDrawer',
@@ -16,5 +17,13 @@ Vue.config.silent = false;
 
 new Vue({
   router,
+  computed: {
+    pageClasses: function() {
+      return {
+        'platform-ios': platformModule.isIOS,
+        'platform-android': platformModule.isAndroid
+      };
+    }
+  },
   store
 }).$start();

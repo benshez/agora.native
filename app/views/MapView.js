@@ -1,13 +1,13 @@
-const SideDrawerSearchComponent = require('../components/SideDrawerSearchComponent');
+const SideDrawerMapSearchComponent = require('../components/SideDrawerMapSearchComponent');
 
 const MapView = {
   methods: {
     onOpenDrawerTap() {
-      this.$refs.sideDrawerSearchComponent.onOpenDrawerTap();
+      this.$refs.sideDrawerMapSearchComponent.onOpenDrawerTap();
     }
   },
   components: {
-    SideDrawerSearchComponent
+    SideDrawerMapSearchComponent
   },
   template: `
     <Page class="page">
@@ -15,7 +15,9 @@ const MapView = {
         <ActionItem text="Menu" @tap="onOpenDrawerTap()"/>
       </ActionBar>  
       <GridLayout rows="*" height="1500px">
-        <SideDrawerSearchComponent ref="sideDrawerSearchComponent" mainContentText="Home" titleText="Search Location"/>
+        <SideDrawerMapSearchComponent ref="sideDrawerMapSearchComponent"
+        mainContentText="Home"
+        titleText="Search Location" />
       </GridLayout>
     </Page>
   `
