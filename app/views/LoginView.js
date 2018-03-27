@@ -1,7 +1,7 @@
 const { alert, prompt } = require('tns-core-modules/ui/dialogs');
 const platformModule = require('tns-core-modules/platform');
-const LoginInitial = require('../components/LoginInitial');
-const LoginMain = require('../components/LoginMain');
+const LoginInitial = require('../components/login/LoginInitial');
+const LoginMain = require('../components/login/LoginMain');
 const enums = require('ui/enums');
 
 const LoginView = {

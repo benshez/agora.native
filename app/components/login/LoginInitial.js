@@ -1,4 +1,4 @@
-const AppConstants = require('../constants/app');
+const AppConstants = require('../../constants/app');
 
 const LoginInitial = {
   name: 'login-initial',

@@ -5,10 +5,14 @@ const router = require('./router');
 const store = require('./store');
 const platformModule = require('tns-core-modules/platform');
 
-Vue.registerElement(
-  'RadSideDrawer',
-  () => require('nativescript-ui-sidedrawer').RadSideDrawer
-);
+// Vue.registerElement(
+//   'RadSideDrawer',
+//   () => require('nativescript-ui-sidedrawer').RadSideDrawer
+// );
+
+Vue.registerElement('RadSideDrawer', () => {
+  return require('nativescript-ui-sidedrawer').RadSideDrawer;
+});
 
 //Vue.use(VueLodash, lodash);
 Vue.use(VueLodash);

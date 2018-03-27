@@ -1,4 +1,4 @@
-const SideDrawerNavigationComponent = require('../components/SideDrawerNavigationComponent');
+const NavigationComponent = require('../components/navigation/NavigationComponent');
 
 const HomeView = {
   methods: {
@@ -7,7 +7,7 @@ const HomeView = {
     }
   },
   components: {
-    SideDrawerNavigationComponent
+    NavigationComponent
   },
   template: `
     <Page class="page">
@@ -15,7 +15,7 @@ const HomeView = {
           <ActionItem text="Menu" @tap="onOpenDrawerTap()"/>
       </ActionBar>  
       <GridLayout rows="*" height="1500px">
-        <SideDrawerNavigationComponent ref="sideDrawerNavigationComponent" mainContentText="Home" titleText="Navigation Menu"/>
+        <NavigationComponent ref="sideDrawerNavigationComponent" mainContentText="Home" titleText="Navigation Menu"/>
       </GridLayout>
     </Page>
   `

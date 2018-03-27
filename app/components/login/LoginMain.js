@@ -5,7 +5,7 @@ const {
   connectionType,
   getConnectionType
 } = require('tns-core-modules/connectivity');
-const AppConstants = require('../constants/app');
+const AppConstants = require('../../constants/app');
 // const User = require('@/models/User');
 // const LoginService = require('@/services/LoginService');
 // const alert = require('@/utils/alert');
