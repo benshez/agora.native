@@ -1,3 +1,7 @@
+@import 'nativescript-theme-core/css/core.light.css';
+
+/* Your CSS goes here */
+
 page {
   font-size: 15;
 }
@@ -14,7 +18,11 @@ page.platform-ios {
 }
 
 action-bar {
-  background-color: black;
+  /* background-color: black;
+  color: white; */
+}
+
+.action-bar-item {
   color: white;
 }
 
@@ -74,6 +82,7 @@ text-field {
 .platform-android .initial-container {
   margin-top: 290;
 }
+
 .platform-android .initial-label {
   font-size: 36;
   letter-spacing: 0.35;
@@ -115,6 +124,7 @@ TextField {
   placeholder-color: #aca6a7;
   margin-bottom: 10;
 }
+
 TextField.light {
   color: #c4afb4;
   placeholder-color: #c4afb4;
@@ -136,6 +146,7 @@ TextField.light {
 .sign-up-stack {
   background-color: #311217;
 }
+
 .sign-up-stack label {
   width: 100%;
   color: white;
@@ -148,6 +159,7 @@ TextField.light {
 .platform-ios .main-container {
   width: 300;
 }
+
 .platform-ios .main-label {
   color: #311217;
   font-size: 32;
@@ -155,11 +167,13 @@ TextField.light {
   margin-bottom: 52;
   letter-spacing: 0.2;
 }
+
 .platform-ios TextField {
   border-width: 1;
   border-color: #6e595c;
   margin-bottom: 20;
 }
+
 .platform-ios TextField .light {
   border-color: #c4afb4;
 }
@@ -172,16 +186,19 @@ TextField.light {
   width: 275;
   height: 394;
 }
+
 .platform-android .main-label {
   font-size: 28;
   margin-top: 42;
   margin-bottom: 32;
   letter-spacing: 0.3;
 }
+
 .sign-up-stack label {
   margin-top: 15;
   text-transform: uppercase;
 }
+
 .forgot-password-label {
   font-size: 13;
   text-transform: uppercase;

@@ -1,5 +1,4 @@
-#Node Modules
-node_modules/
-
-#Platforms
-platforms/
+node_modules
+platforms
+app/**/*.js
+package-lock.json
