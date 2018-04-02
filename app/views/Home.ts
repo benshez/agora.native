@@ -11,7 +11,7 @@ export const Home = {
   template: `
     <Page ref="page" class="page" loaded="pageLoaded()" >
       <ActionBar title="Home">
-          <ActionItem class="action-bar-item" text="Menu" @tap="onOpenDrawerTap()"/>
+          <NavigationButton icon="res://menu" @tap="onOpenDrawerTap()" />
       </ActionBar>
       <GridLayout rows="*" height="1500px">
         <NavigationComponent ref="navigationDrawer"/>

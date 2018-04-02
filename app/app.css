@@ -18,8 +18,8 @@ page.platform-ios {
 }
 
 action-bar {
-  /* background-color: black;
-  color: white; */
+  background-color: black;
+  color: white;
 }
 
 .action-bar-item {

@@ -10,7 +10,7 @@ export const About = {
   template: `
     <Page ref="page" class="page">
       <ActionBar title="About">
-          <ActionItem class="action-bar-item" text="Menu" @tap="onOpenDrawerTap()"/>
+          <NavigationButton icon="res://menu" @tap="onOpenDrawerTap()" />
       </ActionBar>
       <GridLayout rows="*" height="1500px">
         <NavigationComponent ref="navigationDrawer"/>

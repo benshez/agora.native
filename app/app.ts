@@ -1,7 +1,7 @@
 import Vue = require('nativescript-vue');
 import platformModule = require('tns-core-modules/platform');
+import store from './store/store';
 import routes from './system/routes/router';
-
 import { VueLodash } from './system/utilities/vue-lodash';
 
 Vue.config.silent = false;
@@ -15,6 +15,7 @@ Vue.registerElement(
 
 new Vue({
   router: routes,
+  store,
   computed: {
     pageClasses: function() {
       return {
