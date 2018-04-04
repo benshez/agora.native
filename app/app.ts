@@ -1,12 +1,16 @@
 import Vue = require('nativescript-vue');
 import platformModule = require('tns-core-modules/platform');
-import store from './store/store';
+//import store from './store/store';
+//import store from './store/modules/user/store';
+import store from './store';
 import routes from './system/routes/router';
 import { VueLodash } from './system/utilities/vue-lodash';
 
 Vue.config.silent = false;
 
 Vue.use(VueLodash);
+
+Vue.prototype.$store = store;
 
 Vue.registerElement(
   'RadSideDrawer',
@@ -15,7 +19,6 @@ Vue.registerElement(
 
 new Vue({
   router: routes,
-  store,
   computed: {
     pageClasses: function() {
       return {
@@ -23,5 +26,6 @@ new Vue({
         'platform-android': platformModule.isAndroid
       };
     }
-  }
+  },
+  store
 }).$start();

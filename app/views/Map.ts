@@ -3,10 +3,16 @@ import * as enums from 'ui/enums';
 import { LoginInitial } from '../components/user/LoginInitial';
 import { LoginMain } from '../components/user/LoginMain';
 import { NavigationComponent } from '../components/navigation/NavigationComponent';
+import { mapActions, mapGetters } from 'vuex';
 
 export const Map = {
   data() {
-    return { state: 'initial' };
+    return { state: 'initial', link: '' };
+  },
+  created() {},
+  mounted() {
+    this.link = this.getConversations('https://forum.vuejs.org');
+    let x = 1;
   },
   computed: {
     pageClasses: function() {
@@ -17,6 +23,7 @@ export const Map = {
     }
   },
   methods: {
+    ...mapActions({ getConversations: 'user/getConversations' }),
     onOpenDrawerTap() {
       this.$refs.navigationDrawer.onOpenDrawerTap();
     },

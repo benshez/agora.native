@@ -10,9 +10,7 @@ export class UserService {
 
   constructor() {}
 
-  getUserByUserName(
-    context: ActionContext<IUserState, IRootState>
-  ): Promise<IUser> {
+  getUserByUserName<IUser, IRootState>(username: string): Promise<IUser> {
     return axios.get(`${AgoraConstants.APP_API}/user/login`) as Promise<any>;
   }
 
