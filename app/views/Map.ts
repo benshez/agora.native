@@ -4,6 +4,7 @@ import { LoginInitial } from '../components/user/LoginInitial';
 import { LoginMain } from '../components/user/LoginMain';
 import { NavigationComponent } from '../components/navigation/NavigationComponent';
 import { mapActions, mapGetters } from 'vuex';
+import { IUserPost } from '../interfaces/user/IUser';
 
 export const Map = {
   data() {
@@ -11,7 +12,12 @@ export const Map = {
   },
   created() {},
   mounted() {
-    this.link = this.getConversations('https://forum.vuejs.org');
+    let data: IUserPost = {
+      password: 'B3nSh3z*',
+      email: 'benshez@gmail.com',
+      username: 'benshez@gmail.com'
+    };
+    this.link = this.getUserByUserName(data);
     let x = 1;
   },
   computed: {
@@ -23,7 +29,7 @@ export const Map = {
     }
   },
   methods: {
-    ...mapActions({ getConversations: 'user/getConversations' }),
+    ...mapActions({ getUserByUserName: 'user/getUserByUserName' }),
     onOpenDrawerTap() {
       this.$refs.navigationDrawer.onOpenDrawerTap();
     },

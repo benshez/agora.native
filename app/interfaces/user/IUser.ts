@@ -21,6 +21,11 @@ export interface IUser {
   token_expiry: string;
 }
 
+export interface IUserPost {
+  username: string;
+  email: string;
+  password: string;
+}
 export interface ProfileState {
   user?: IUser;
   error: boolean;

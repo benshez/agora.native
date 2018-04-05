@@ -1,8 +1,8 @@
 export const AgoraConstants = {
   APP_API:
     process.env.NODE_ENV === 'production'
-      ? 'http://localhost:8000/api/v1'
-      : 'http://localhost:8000/api/v1',
+      ? 'http://192.168.1.14:8000/api/v1'
+      : 'http://192.168.1.14:8000/api/v1',
   APP_NAME_TO_UPPER: 'AGORA',
   APP_NAME: 'Agora',
   MAPBOX_ACCESS_PLACES_API:
