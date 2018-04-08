@@ -4,7 +4,7 @@ import { LoginInitial } from '../components/user/LoginInitial';
 import { LoginMain } from '../components/user/LoginMain';
 import { NavigationComponent } from '../components/navigation/NavigationComponent';
 import { mapActions, mapGetters } from 'vuex';
-import { IUserPost } from '../interfaces/user/IUser';
+import { IUserByEmail, IUserByName } from '../shared/interfaces/user/IUser';
 
 export const Map = {
   data() {
@@ -12,10 +12,9 @@ export const Map = {
   },
   created() {},
   mounted() {
-    let data: IUserPost = {
+    let data: IUserByEmail = {
       password: 'B3nSh3z*',
-      email: 'benshez@gmail.com',
-      username: 'benshez@gmail.com'
+      email: 'benshez@gmail.com'
     };
     this.link = this.getUserByUserName(data);
     let x = 1;

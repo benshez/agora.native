@@ -1,8 +1,8 @@
 export const AgoraConstants = {
   APP_API:
     process.env.NODE_ENV === 'production'
-      ? 'http://192.168.1.14:8000/api/v1'
-      : 'http://192.168.1.14:8000/api/v1',
+      ? 'http://192.168.43.69:8000/api/v1'
+      : 'http://192.168.43.69:8000/api/v1',
   APP_NAME_TO_UPPER: 'AGORA',
   APP_NAME: 'Agora',
   MAPBOX_ACCESS_PLACES_API:
@@ -18,5 +18,6 @@ export const AgoraConstants = {
     DARK: 'mapbox://styles/mapbox/dark-v9',
     LIGHT: 'mapbox://styles/mapbox/light-v9',
     OUTDOORS: 'mapbox://styles/mapbox/outdoors-v10'
-  }
+  },
+  STORE_NAMESPACED: true
 };

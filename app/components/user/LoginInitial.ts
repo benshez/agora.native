@@ -1,4 +1,4 @@
-import { AgoraConstants } from '../../system/constants/constants';
+import { AgoraConstants } from '../../shared/system/constants/constants';
 
 export const LoginInitial = {
   name: 'login-initial',
