@@ -19,9 +19,9 @@
     }
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
-    "axios": "^0.18.0",
     "kinvey-nativescript-sdk": "^3.10.0",
     "lodash": "^4.17.5",
     "nativescript-accelerometer": "^2.0.1",
