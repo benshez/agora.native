@@ -1,8 +1,8 @@
 import Vue = require('nativescript-vue');
 import platformModule = require('tns-core-modules/platform');
-import store from './shared/store';
+import store from './common/store';
 import routes from './system/routes/router';
-import { VueLodash } from './shared/system/utilities/vue-lodash';
+import { VueLodash } from './common/system/utilities/vue-lodash';
 
 Vue.config.silent = false;
 

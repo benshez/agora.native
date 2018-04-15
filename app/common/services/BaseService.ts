@@ -1,4 +1,3 @@
-import { getString, setString } from 'tns-core-modules/application-settings';
 import { IContentType } from '../interfaces/header/IHeader';
 
 const tokenKey = 'token';

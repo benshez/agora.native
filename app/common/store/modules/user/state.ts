@@ -20,5 +20,7 @@ export const state: IUser = {
   logo: '',
   abn: '',
   token_char: '',
-  token_expiry: ''
+  token_expiry: '',
+  error: false,
+  message: ''
 };

@@ -19,6 +19,8 @@ export interface IUser {
   abn: string;
   token_char: string;
   token_expiry: string;
+  error: boolean;
+  message: string;
 }
 
 export interface IUserByName {

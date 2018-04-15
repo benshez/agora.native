@@ -9,20 +9,18 @@ import BaseService from '../BaseService';
 export class UserService extends BaseService {
   private user: IUser;
 
-  getUserByUserName<IUser, IRootState>(user: IUserByName): Promise<IUser> {
+  getUserByUserName(user: IUserByEmail): Promise<any> {
     let config: AxiosRequestConfig = {
       headers: this.getHeaders(),
       data: JSON.stringify(user)
     };
-
-    return axios
-      .post(`${AgoraConstants.APP_API}/user/login`, user, config)
-      .then((res: AxiosResponse) => {
-        return res.data;
-      })
-      .catch(error => {
-        console.log(error);
-      }) as Promise<any>;
+    return axios.post(`${AgoraConstants.APP_API}/user/login`, user, config);
+    // .then((res: AxiosResponse) => {
+    //   return res.data;
+    // })
+    // .catch(error => {
+    //   console.log(error);
+    // }) as Promise<IUser>;
   }
 
   getUserByEmail<IUser, IRootState>(user: IUserByEmail): Promise<IUser> {

@@ -1,4 +1,5 @@
-import { AgoraConstants } from '../../shared/system/constants/constants';
+import { AgoraConstants } from '../../common/system/constants/constants';
+import { EventBus } from '../../common/system/events/index';
 
 export const LoginInitial = {
   name: 'login-initial',
@@ -19,7 +20,8 @@ export const LoginInitial = {
         })
         .then(() => {
           console.log('emitting login');
-          this.$emit('login');
+          EventBus.$emit('login');
+          //this.$emit('login');
         });
     }
   },
