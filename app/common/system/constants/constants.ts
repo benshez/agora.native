@@ -19,5 +19,6 @@ export const AgoraConstants = {
     LIGHT: 'mapbox://styles/mapbox/light-v9',
     OUTDOORS: 'mapbox://styles/mapbox/outdoors-v10'
   },
-  STORE_NAMESPACED: true
+  STORE_NAMESPACED: true,
+  STORE_STRICT_MODE: false
 };

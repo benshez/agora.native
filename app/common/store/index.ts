@@ -1,17 +1,13 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { IRootState } from '../interfaces/store/IRootState';
 import { UserModule } from './modules/user';
+import { AgoraConstants } from '../system/constants/constants';
 
 Vue.use(Vuex);
 
-const debug = process.env.NODE_ENV !== 'production';
-
-const store = new Vuex.Store<IRootState>({
+const store = new Vuex.Store({
   modules: { UserModule },
-  strict: debug
+  strict: AgoraConstants.STORE_STRICT_MODE
 });
-
-//Vue.prototype.$store = store;
 
 export default store;

@@ -5,7 +5,12 @@ import { IRootState } from '../../../interfaces/store/IRootState';
 
 export const mutations = <MutationTree<IUser>>{
   [mutationTypes.GET_USER_BY_EMAIL](state: IUser, user: IUser) {
-    console.log(mutationTypes.GET_USER_BY_EMAIL, user);
-    state = user;
+    return (state = user);
+  },
+  [mutationTypes.USER_LOGIN_HAS_ERROR](state: IUser, hasError: boolean) {
+    return (state.error = hasError);
+  },
+  [mutationTypes.USER_LOGIN_ERROR_MESSAGE](state: IUser, message: string) {
+    return (state.message = message);
   }
 };
