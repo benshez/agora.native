@@ -1,13 +1,14 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
+import Vuex, { StoreOptions } from 'vuex';
 import { UserModule } from './modules/user';
+import { IRootState } from '../interfaces/store/IRootState';
 import { AgoraConstants } from '../system/constants/constants';
 
 Vue.use(Vuex);
 
-const store = new Vuex.Store({
+const store: StoreOptions<IRootState> = {
   modules: { UserModule },
   strict: AgoraConstants.STORE_STRICT_MODE
-});
+};
 
-export default store;
+export default new Vuex.Store<IRootState>(store);

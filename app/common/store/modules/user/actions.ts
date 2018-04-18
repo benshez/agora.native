@@ -10,7 +10,7 @@ import { UserService } from '../../../services/user/UserService';
 import { IRootState } from '../../../interfaces/store/IRootState';
 import * as mutationTypes from '../../types';
 
-export const actions = <ActionTree<IUser, IRootState>>{
+export const actions: ActionTree<IUser, IRootState> = {
   [mutationTypes.GET_USER_BY_EMAIL]({ dispatch, commit }, user: IUserByEmail) {
     new UserService()
       .getUserByUserName(user)
