@@ -7,7 +7,7 @@ import { state } from './state';
 import { getters } from './getters';
 import { AgoraConstants } from '../../../system/constants/constants';
 
-export const UserModule: Module<IUser, IRootState> = {
+export const user: Module<IUser, IRootState> = {
   namespaced: AgoraConstants.STORE_NAMESPACED,
   state,
   getters,

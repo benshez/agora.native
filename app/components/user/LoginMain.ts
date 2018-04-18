@@ -5,7 +5,7 @@ import {
   connectionType,
   getConnectionType
 } from 'tns-core-modules/connectivity';
-import { AgoraConstants } from '../../shared/system/constants/constants';
+import { AgoraConstants } from '../../common/system/constants/constants';
 
 export const LoginMain = {
   name: 'login-main',

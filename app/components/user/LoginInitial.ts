@@ -1,5 +1,6 @@
 import { AgoraConstants } from '../../common/system/constants/constants';
 import { EventBus } from '../../common/system/events/index';
+import store from '../../common/store';
 
 export const LoginInitial = {
   name: 'login-initial',

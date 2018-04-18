@@ -3,12 +3,20 @@ import * as enums from 'ui/enums';
 import { LoginInitial } from '../components/user/LoginInitial';
 import { LoginMain } from '../components/user/LoginMain';
 import { NavigationComponent } from '../components/navigation/NavigationComponent';
-import { mapActions, mapGetters } from 'vuex';
-import { IUserByEmail, IUserByName } from '../shared/interfaces/user/IUser';
+import { mapState } from 'vuex';
+import store from '../common/store';
+import * as mutationTypes from '../common/store/types';
+import { IUserByEmail, IUserByName } from '../common/interfaces/user/IUser';
+import { IRootState } from '../common/interfaces/store/IRootState';
 
 export const Map = {
   data() {
-    return { state: 'initial', link: '' };
+    return {
+      state: 'initial',
+      link: '',
+      loginUsername: '',
+      loginPassword: ''
+    };
   },
   created() {},
   mounted() {
@@ -20,6 +28,14 @@ export const Map = {
     let x = 1;
   },
   computed: {
+    ...mapState({
+      error: (state: IRootState) => {
+        return state.user.error;
+      },
+      message: (state: IRootState) => {
+        return state.user.message;
+      }
+    }),
     pageClasses: function() {
       return {
         'platform-ios': platformModule.isIOS,
@@ -28,7 +44,6 @@ export const Map = {
     }
   },
   methods: {
-    ...mapActions({ getUserByUserName: 'user/getUserByUserName' }),
     onOpenDrawerTap() {
       this.$refs.navigationDrawer.onOpenDrawerTap();
     },
