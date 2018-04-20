@@ -1,5 +1,5 @@
 # All src js files
-src/**/*.js
+app/**/*.js
 
 # All constants
 src/common/system/constants/constants.ts
