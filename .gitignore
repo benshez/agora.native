@@ -2,7 +2,7 @@
 app/**/*.js
 
 # All constants
-src/common/system/constants/constants.ts
+app/common/system/constants/constants.ts
 
 node_modules
 platforms
