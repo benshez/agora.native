@@ -1,8 +1,8 @@
 # All src js files
 app/**/*.js
 
-# All constants
-app/common/system/constants/constants.ts
+# All private
+app/common/system/private/**/*.ts
 
 node_modules
 platforms
