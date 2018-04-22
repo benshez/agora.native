@@ -8,11 +8,16 @@ Vue.config.silent = false;
 
 Vue.use(VueLodash);
 
-Vue.prototype.$store = store;
+//Vue.prototype.$store = store;
 
 Vue.registerElement(
   'RadSideDrawer',
   () => require('nativescript-ui-sidedrawer').RadSideDrawer
+);
+
+Vue.registerElement(
+  'RadDataForm',
+  () => require('nativescript-ui-dataform').RadDataForm
 );
 
 new Vue({

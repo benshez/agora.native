@@ -3,39 +3,16 @@ import * as enums from 'ui/enums';
 import { LoginInitial } from '../components/user/LoginInitial';
 import { LoginMain } from '../components/user/LoginMain';
 import { NavigationComponent } from '../components/navigation/NavigationComponent';
-import { mapState } from 'vuex';
-import store from '../common/store';
-import * as mutationTypes from '../common/store/types';
-import { IUserByEmail, IUserByName } from '../common/interfaces/user/IUser';
-import { IRootState } from '../common/interfaces/store/IRootState';
 
 export const Map = {
   data() {
     return {
       state: 'initial',
-      link: '',
-      loginUsername: '',
-      loginPassword: ''
+      link: ''
     };
   },
   created() {},
-  mounted() {
-    let data: IUserByEmail = {
-      password: 'B3nSh3z*',
-      email: 'benshez@gmail.com'
-    };
-    this.link = this.getUserByUserName(data);
-    let x = 1;
-  },
   computed: {
-    ...mapState({
-      error: (state: IRootState) => {
-        return state.user.error;
-      },
-      message: (state: IRootState) => {
-        return state.user.message;
-      }
-    }),
     pageClasses: function() {
       return {
         'platform-ios': platformModule.isIOS,

@@ -5,7 +5,12 @@ import {
   connectionType,
   getConnectionType
 } from 'tns-core-modules/connectivity';
+import { mapState } from 'vuex';
 import { AgoraConstants } from '../../common/system/constants/constants';
+import store from '../../common/store';
+import * as mutationTypes from '../../common/store/types';
+import { IUserByEmail, IUserByName } from '../../common/interfaces/user/IUser';
+import { IRootState } from '../../common/interfaces/store/IRootState';
 
 export const LoginMain = {
   name: 'login-main',
@@ -17,8 +22,20 @@ export const LoginMain = {
       isLoggingIn: true,
       isAuthenticating: false,
       user: '',
-      app: AgoraConstants
+      app: AgoraConstants,
+      loginUsername: '',
+      loginPassword: ''
     };
+  },
+  computed: {
+    ...mapState({
+      error: (state: IRootState) => {
+        return state.user.error;
+      },
+      message: (state: IRootState) => {
+        return state.user.message;
+      }
+    })
   },
   watch: {
     visible: function(val) {
