@@ -1,4 +1,4 @@
-import { AxiosResponse } from 'axios';
+import { AxiosResponse, AxiosError } from 'axios';
 import { ActionTree } from 'vuex';
 import {
   IUser,
@@ -9,22 +9,20 @@ import { IUserState } from '../../../interfaces/user/IUserState';
 import { UserService } from '../../../services/user/UserService';
 import { IRootState } from '../../../interfaces/store/IRootState';
 import * as mutationTypes from '../../types';
+import { state } from './state';
 
 export const actions: ActionTree<IUser, IRootState> = {
-  [mutationTypes.GET_USER_BY_EMAIL]({ dispatch, commit }, user: IUserByEmail) {
+  [mutationTypes.GET_USER_BY_EMAIL]({ commit }, user: IUserByEmail) {
     new UserService()
       .getUserByUserName(user)
       .then((response: AxiosResponse) => {
-        const user: IUser = response.data;
-        commit(mutationTypes.GET_USER_BY_EMAIL, user);
-        if (user.error) {
-          commit(mutationTypes.USER_LOGIN_HAS_ERROR, user.error);
-          commit(mutationTypes.USER_LOGIN_ERROR_MESSAGE, user.message);
-        }
+        commit(mutationTypes.GET_USER_BY_EMAIL, response.data as IUser);
       })
       .catch(error => {
-        commit(mutationTypes.USER_LOGIN_HAS_ERROR, true);
-        commit(mutationTypes.USER_LOGIN_ERROR_MESSAGE, error);
+        const user: IUser = state;
+        user.error = true;
+        user.message = error.message;
+        commit(mutationTypes.GET_USER_BY_EMAIL, user);
       });
   },
 

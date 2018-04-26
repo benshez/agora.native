@@ -23,3 +23,9 @@ export const AgoraConstants = {
   STORE_NAMESPACED: true,
   STORE_STRICT_MODE: false
 };
+
+export const AgoraApiRoutes = {
+  APP_API_ROUTES: {
+    LOGIN_ROUTE: `${AgoraConstants.APP_API}/user/login`
+  }
+};
