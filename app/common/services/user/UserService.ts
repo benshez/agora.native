@@ -3,7 +3,7 @@ import { ActionContext, Store } from 'vuex';
 import { IUser, IUserByName, IUserByEmail } from '../../interfaces/user/IUser';
 import { IUserState } from '../../interfaces/user/IUserState';
 import { IRootState } from '../../interfaces/store/IRootState';
-import { AgoraApiRoutes } from '../../system/constants/constants';
+import { AgoraConfiguration } from '../../system/constants/AgoraConfiguration';
 import BaseService from '../BaseService';
 
 export class UserService extends BaseService {
@@ -14,7 +14,7 @@ export class UserService extends BaseService {
     this.config.data = JSON.stringify(user);
 
     return axios.post(
-      `${AgoraApiRoutes.APP_API_ROUTES.LOGIN_ROUTE}`,
+      `${AgoraConfiguration.APP_SETTINGS.APP_ROUTES.LOGIN_ROUTE}`,
       user,
       this.config
     );
@@ -27,7 +27,11 @@ export class UserService extends BaseService {
     };
 
     return axios
-      .post(`${AgoraApiRoutes.APP_API_ROUTES.LOGIN_ROUTE}`, user, config)
+      .post(
+        `${AgoraConfiguration.APP_SETTINGS.APP_ROUTES.LOGIN_ROUTE}`,
+        user,
+        config
+      )
       .then((res: AxiosResponse) => {
         return res.data;
       })

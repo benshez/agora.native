@@ -6,7 +6,7 @@ import {
   getConnectionType
 } from 'tns-core-modules/connectivity';
 import { mapState } from 'vuex';
-import { AgoraConstants } from '../../common/system/constants/constants';
+import { AgoraConfiguration } from '../../common/system/constants/AgoraConfiguration';
 import store from '../../common/store';
 import * as mutationTypes from '../../common/store/types';
 import { IUserByEmail, IUserByName } from '../../common/interfaces/user/IUser';
@@ -22,7 +22,7 @@ export const LoginMain = {
       isLoggingIn: true,
       isAuthenticating: false,
       user: '',
-      app: AgoraConstants,
+      app: AgoraConfiguration,
       loginUsername: '',
       loginPassword: ''
     };
@@ -104,7 +104,7 @@ export const LoginMain = {
   },
   template: `
     <StackLayout ref="mainContainer" class="main-container" :visibility="visible?'visible':'collapse'">
-      <Label class="main-label" :text="app.APP_NAME_TO_UPPER" :color="isLoggingIn? 'black' : 'white'"></Label>
+      <Label class="main-label" :text="app.APP_SETTINGS.APP_NAME_TO_UPPER" :color="isLoggingIn? 'black' : 'white'"></Label>
 
       <!-- form controls -->
       <GridLayout ref="formControls" class="form-controls" rows="auto, auto" translateY="50">

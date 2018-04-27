@@ -1,4 +1,4 @@
-import { AgoraConstants } from '../../common/system/constants/constants';
+import { AgoraConfiguration } from '../../common/system/constants/AgoraConfiguration';
 import { EventBus } from '../../common/system/events/index';
 import store from '../../common/store';
 
@@ -9,7 +9,7 @@ export const LoginInitial = {
   },
   data: function() {
     return {
-      app: AgoraConstants
+      app: AgoraConfiguration
     };
   },
   methods: {
@@ -28,7 +28,7 @@ export const LoginInitial = {
   },
   template: `
     <StackLayout ref="initialContainer" class="initial-container" :visibility="visible?'visible':'collapse'">
-      <Label :text="app.APP_NAME_TO_UPPER" class="initial-label"></Label>
+      <Label :text="app.APP_SETTINGS.APP_NAME_TO_UPPER" class="initial-label"></Label>
       <StackLayout @tap="login()" class="initial-button">
       <Label text="Login" class="initial-button-label"></Label>
       </StackLayout>

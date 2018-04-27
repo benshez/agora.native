@@ -5,10 +5,10 @@ import { mutations } from './mutation';
 import { actions } from './actions';
 import { state } from './state';
 import { getters } from './getters';
-import { AgoraConstants } from '../../../system/constants/constants';
+import { AgoraConfiguration } from '../../../system/constants/AgoraConfiguration';
 
 export const user: Module<IUser, IRootState> = {
-  namespaced: AgoraConstants.STORE_NAMESPACED,
+  namespaced: AgoraConfiguration.APP_SETTINGS.STORE_NAMESPACED,
   state,
   getters,
   mutations,
