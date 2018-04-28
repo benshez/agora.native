@@ -1,5 +1,3 @@
-import { IContentType } from '../interfaces/header/IHeader';
-
 const tokenKey = 'token';
 
 export default class BaseService {
