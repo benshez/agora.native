@@ -10,7 +10,7 @@ export class UserService extends BaseService {
   private user: IUser;
   private config: AxiosRequestConfig = { headers: this.getHeaders() };
 
-  getUserByUserName(user: IUserByEmail): Promise<any> {
+  GET_USER_BY_EMAIL(user: IUserByEmail): Promise<any> {
     this.config.data = JSON.stringify(user);
 
     return axios.post(
@@ -20,23 +20,13 @@ export class UserService extends BaseService {
     );
   }
 
-  getUserByEmail<IUser, IRootState>(user: IUserByEmail): Promise<IUser> {
-    let config: AxiosRequestConfig = {
-      headers: this.getHeaders(),
-      data: JSON.stringify(user)
-    };
+  ADD_USER(user: IUser): Promise<any> {
+    this.config.data = JSON.stringify(user);
 
-    return axios
-      .post(
-        `${AgoraConfiguration.APP_SETTINGS.APP_ROUTES.LOGIN_ROUTE}`,
-        user,
-        config
-      )
-      .then((res: AxiosResponse) => {
-        return res.data;
-      })
-      .catch(error => {
-        console.log(error);
-      }) as Promise<any>;
+    return axios.post(
+      `${AgoraConfiguration.APP_SETTINGS.APP_ROUTES.ADD_USER_ROUTE}`,
+      user,
+      this.config
+    );
   }
 }

@@ -2,6 +2,7 @@ import { AgoraPrivateConfiguration } from '../private/AgoraPrivateConfiguration'
 
 export interface IApplicationRoutes {
   LOGIN_ROUTE: string;
+  ADD_USER_ROUTE: string;
 }
 export interface IAppSettings {
   API: string;
@@ -56,7 +57,8 @@ export class AgoraConfiguration {
     APP_NAME: 'Agora',
     APP_NAME_TO_UPPER: 'AGORA',
     APP_ROUTES: {
-      LOGIN_ROUTE: `${AgoraConfiguration.APP_API()}/user/login`
+      LOGIN_ROUTE: `${AgoraConfiguration.APP_API()}/user/login`,
+      ADD_USER_ROUTE: `${AgoraConfiguration.APP_API()}/user`
     },
     STORE_NAMESPACED: true,
     STORE_STRICT_MODE: false

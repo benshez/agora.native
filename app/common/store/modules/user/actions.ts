@@ -14,7 +14,7 @@ import { state } from './state';
 export const actions: ActionTree<IUser, IRootState> = {
   [mutationTypes.GET_USER_BY_EMAIL]({ commit }, user: IUserByEmail) {
     new UserService()
-      .getUserByUserName(user)
+      .GET_USER_BY_EMAIL(user)
       .then((response: AxiosResponse) => {
         commit(mutationTypes.GET_USER_BY_EMAIL, response.data as IUser);
       })
@@ -26,10 +26,17 @@ export const actions: ActionTree<IUser, IRootState> = {
       });
   },
 
-  getUserByUserEmail({ dispatch, commit }, user: IUserByEmail) {
-    new UserService().getUserByEmail<IUser, IRootState>(user).then(reponse => {
-      commit(mutationTypes.GET_USER_BY_EMAIL, { reponse });
-      return reponse;
-    });
+  [mutationTypes.ADD_USER]({ commit }, user: IUser) {
+    new UserService()
+      .ADD_USER(user)
+      .then((response: AxiosResponse) => {
+        commit(mutationTypes.ADD_USER, response.data as IUser);
+      })
+      .catch(error => {
+        const user: IUser = state;
+        user.error = true;
+        user.message = error.message;
+        commit(mutationTypes.ADD_USER, user);
+      });
   }
 };
