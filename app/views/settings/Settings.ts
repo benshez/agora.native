@@ -1,6 +1,6 @@
-import { NavigationComponent } from '../components/navigation/NavigationComponent';
+import { NavigationComponent } from '../../components/navigation/NavigationComponent';
 
-export const About = {
+export const Settings = {
   methods: {
     onOpenDrawerTap() {
       this.$refs.navigationDrawer.onOpenDrawerTap();
@@ -9,7 +9,7 @@ export const About = {
   components: { NavigationComponent },
   template: `
     <Page ref="page" class="page">
-      <ActionBar title="About">
+      <ActionBar title="Settings">
           <NavigationButton icon="res://menu" @tap="onOpenDrawerTap()" />
       </ActionBar>
       <GridLayout rows="*" height="1500px">

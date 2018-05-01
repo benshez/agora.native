@@ -1,8 +1,8 @@
 import platformModule = require('tns-core-modules/platform');
 import * as enums from 'ui/enums';
-import { LoginInitial } from '../components/user/LoginInitial';
-import { LoginMain } from '../components/user/LoginMain';
-import { NavigationComponent } from '../components/navigation/NavigationComponent';
+import { LoginInitial } from '../../components/user/LoginInitial';
+import { LoginMain } from '../../components/user/LoginMain';
+import { NavigationComponent } from '../../components/navigation/NavigationComponent';
 
 export const Map = {
   data() {

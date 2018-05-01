@@ -1,7 +1,6 @@
-import { Page } from 'tns-core-modules/ui/page';
-import { NavigationComponent } from '../components/navigation/NavigationComponent';
+import { NavigationComponent } from '../../components/navigation/NavigationComponent';
 
-export const Home = {
+export const About = {
   methods: {
     onOpenDrawerTap() {
       this.$refs.navigationDrawer.onOpenDrawerTap();
@@ -9,8 +8,8 @@ export const Home = {
   },
   components: { NavigationComponent },
   template: `
-    <Page ref="page" class="page" loaded="pageLoaded()" >
-      <ActionBar title="Home">
+    <Page ref="page" class="page">
+      <ActionBar title="About">
           <NavigationButton icon="res://menu" @tap="onOpenDrawerTap()" />
       </ActionBar>
       <GridLayout rows="*" height="1500px">
