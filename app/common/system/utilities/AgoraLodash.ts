@@ -1,6 +1,6 @@
 import lodash from 'lodash';
 
-export const VueLodash = {
+export const AgoraLodash = {
   install: function(Vue, options) {
     Vue.prototype.$_ = lodash;
   }
