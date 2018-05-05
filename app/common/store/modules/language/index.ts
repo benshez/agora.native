@@ -7,7 +7,7 @@ import { state } from './state';
 import { getters } from './getters';
 import { AgoraConfiguration } from '../../../system/constants/AgoraConfiguration';
 
-export const lang: Module<ILanguage, IRootState> = {
+export const language: Module<ILanguage, IRootState> = {
   namespaced: AgoraConfiguration.APP_SETTINGS.STORE_NAMESPACED,
   state,
   getters,
