@@ -11,5 +11,9 @@ export const actions: ActionTree<ILanguage, IRootState> = {
   [mutationTypes.GET_LANGUAGE]({ commit }, lang: string) {
     let messages = new I18nResolver(i18n, lang).translation;
     commit(mutationTypes.GET_LANGUAGE, messages);
+  },
+  [mutationTypes.UPDATE_LANGUAGE]({ commit }, lang: string) {
+    let messages = new I18nResolver(i18n, lang).translation;
+    commit(mutationTypes.GET_LANGUAGE, messages);
   }
 };
