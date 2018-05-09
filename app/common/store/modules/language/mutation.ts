@@ -1,5 +1,5 @@
 import { MutationTree } from 'vuex';
-import * as mutationTypes from '../../types';
+import * as mutationTypes from '../types';
 import { ILanguage } from '../../../interfaces/language/ILanguage';
 
 import { IRootState } from '../../../interfaces/store/IRootState';

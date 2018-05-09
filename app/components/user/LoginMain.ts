@@ -7,8 +7,7 @@ import {
 } from 'tns-core-modules/connectivity';
 import { mapState } from 'vuex';
 import { AgoraConfiguration } from '../../common/system/constants/AgoraConfiguration';
-import store from '../../common/store';
-import * as mutationTypes from '../../common/store/types';
+import * as mutationTypes from '../../common/store/modules/types';
 import { IUserByEmail, IUserByName } from '../../common/interfaces/user/IUser';
 import { IRootState } from '../../common/interfaces/store/IRootState';
 

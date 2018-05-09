@@ -3,7 +3,7 @@ import { ActionTree } from 'vuex';
 import { I18nResolver } from 'i18n-ts';
 import { ILanguage } from '../../../interfaces/language/ILanguage';
 import { IRootState } from '../../../interfaces/store/IRootState';
-import * as mutationTypes from '../../types';
+import * as mutationTypes from '../types';
 import { state } from './state';
 import { i18n } from '../../../language';
 

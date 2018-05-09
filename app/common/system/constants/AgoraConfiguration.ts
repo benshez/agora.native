@@ -1,4 +1,6 @@
 import { AgoraPrivateConfiguration } from '../private/AgoraPrivateConfiguration';
+import { enAU } from '../../language/en-AU';
+import { af } from '../../language/af';
 
 export interface IApplicationRoutes {
   LOGIN_ROUTE: string;
@@ -62,6 +64,11 @@ export class AgoraConfiguration {
     },
     STORE_NAMESPACED: true,
     STORE_STRICT_MODE: false
+  };
+  
+  public static APP_LANGUAGES = {
+    'en-AU': enAU,
+    'af': af
   };
 
   public static MAPBOX_SETTINGS: IMapBoxSettings = {
