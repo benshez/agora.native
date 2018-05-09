@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex, { StoreOptions } from 'vuex';
 import { user } from './user';
-import { language } from './language';
+import { language } from './i18n';
 import { IRootState } from '../../interfaces/store/IRootState';
 import { AgoraConfiguration } from '../../system/constants/AgoraConfiguration';
 

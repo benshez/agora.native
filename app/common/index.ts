@@ -7,9 +7,8 @@ import {
   IUserByName,
   IUserState
 } from './interfaces';
-import { enAU } from './language/en-AU';
-import { af } from './language/af';
-import { LanguageCodes, Languages, i18n } from './language';
+import { en } from './i18n/en';
+import { af } from './i18n/af';
 import { BaseService, UserService } from './services';
 import {
   IApplicationRoutes,
@@ -30,11 +29,8 @@ export {
   IUserByEmail,
   IUserByName,
   IUserState,
-  enAU,
+  en,
   af,
-  LanguageCodes,
-  Languages,
-  i18n,
   BaseService,
   UserService,
   IApplicationRoutes,

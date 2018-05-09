@@ -1,6 +1,6 @@
 import { I18n } from 'i18n-ts';
 
-export interface IMessages {
+export interface ILanguage {
   AppName: string;
   AppNameUpperCase: string;
   UserRegistrationTitle: string;
@@ -11,7 +11,13 @@ export interface IMessages {
   Greeting: Function;
 }
 
-export interface ILanguage {
-  'en-AU': IMessages;
-  af: IMessages;
+export interface ILanguages {
+  key: string;
+  description: string;
+  translations: ILanguage;
 }
+
+// export interface ILanguage {
+//   'en-AU': IMessages;
+//   af: IMessages;
+// }

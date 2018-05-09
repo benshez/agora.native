@@ -1,6 +1,6 @@
 import { Module } from 'vuex';
 import { IRootState } from '../../../interfaces/store/IRootState';
-import { ILanguage } from '../../../interfaces/language/ILanguage';
+import { ILanguage } from '../../../interfaces/i18n/ILanguage';
 import { mutations } from './mutation';
 import { actions } from './actions';
 import { state } from './state';

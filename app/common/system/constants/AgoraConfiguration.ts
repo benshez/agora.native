@@ -1,7 +1,4 @@
 import { AgoraPrivateConfiguration } from '../private/AgoraPrivateConfiguration';
-import { enAU } from '../../language/en-AU';
-import { af } from '../../language/af';
-
 export interface IApplicationRoutes {
   LOGIN_ROUTE: string;
   ADD_USER_ROUTE: string;
@@ -14,7 +11,6 @@ export interface IAppSettings {
   STORE_NAMESPACED: boolean;
   STORE_STRICT_MODE: boolean;
 }
-
 export interface IMapBoxStyles {
   TRAFFIC_DAY: string;
   TRAFFIC_NIGHT: string;
@@ -29,7 +25,6 @@ export interface IMapBoxSettings {
   MAPBOX_ACCESS_TOKEN: string;
   MAPBOX_MAP_STYLES: IMapBoxStyles;
 }
-
 export class AgoraConfiguration {
   public static ENVIRONMENT(): string {
     return process.env.NODE_ENV;
@@ -64,11 +59,6 @@ export class AgoraConfiguration {
     },
     STORE_NAMESPACED: true,
     STORE_STRICT_MODE: false
-  };
-  
-  public static APP_LANGUAGES = {
-    'en-AU': enAU,
-    'af': af
   };
 
   public static MAPBOX_SETTINGS: IMapBoxSettings = {

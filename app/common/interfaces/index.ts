@@ -1,5 +1,5 @@
 import { IAuthorizationHeader } from './header/IHeader';
-import { ILanguage } from './language/ILanguage';
+import { ILanguage } from './i18n/ILanguage';
 import { IRootState } from './store/IRootState';
 import { IUser, IUserByName, IUserByEmail } from './user/IUser';
 import { IUserState } from './user/IUserState';
