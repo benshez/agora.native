@@ -4,7 +4,6 @@ import {
   IMapBoxStyles,
   IMapBoxSettings
 } from './constants/AgoraConfiguration';
-import { EventBus } from './events';
 import {
   IAPIKeys,
   AgoraPrivateConfiguration
@@ -15,7 +14,6 @@ export {
   IAppSettings,
   IMapBoxStyles,
   IMapBoxSettings,
-  EventBus,
   IAPIKeys,
   AgoraPrivateConfiguration
 };

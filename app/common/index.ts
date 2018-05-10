@@ -15,7 +15,6 @@ import {
   IAppSettings,
   IMapBoxStyles,
   IMapBoxSettings,
-  EventBus,
   IAPIKeys,
   AgoraPrivateConfiguration
 } from './system';
@@ -37,7 +36,6 @@ export {
   IAppSettings,
   IMapBoxStyles,
   IMapBoxSettings,
-  EventBus,
   IAPIKeys,
   AgoraPrivateConfiguration,
   AgoraHeaders

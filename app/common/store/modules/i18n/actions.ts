@@ -4,7 +4,6 @@ import _ from 'lodash';
 import { ILanguage, ITranslation } from '../../../interfaces/i18n/ILanguage';
 import { IRootState } from '../../../interfaces/store/IRootState';
 import * as mutationTypes from '../types';
-import { state } from './state';
 import { LanguageService } from '../../../services/i18n/LanguageService';
 
 export const actions: ActionTree<ITranslation, IRootState> = {

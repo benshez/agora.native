@@ -14,7 +14,10 @@ export const en: ILanguage = {
     LoginButtonText: 'Login',
     RegisterButtonText: 'Register',
     ForgotPasswordButtonText: 'Forgot Password',
-    LanguageMenuText: "Translate",
+    LanguageMenuText: 'Translate',
+    HomeMenuItemText: 'Home',
+    AboutMenuItemText: 'About',
+    LoginMenuItemText: 'Login',
     Greeting: (name: string) => `Hi ${name}`
   }
 };

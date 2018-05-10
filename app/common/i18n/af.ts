@@ -14,7 +14,10 @@ export const af: ILanguage = {
     LoginButtonText: 'Login',
     RegisterButtonText: 'Registeer',
     ForgotPasswordButtonText: 'Passwoord Vergeet',
-    LanguageMenuText: "Vertaal",
+    LanguageMenuText: 'Vertaal',
+    HomeMenuItemText: 'Tuis',
+    AboutMenuItemText: 'Oor',
+    LoginMenuItemText: 'Log',
     Greeting: (name: string) => `Hi ${name}`
   }
 };

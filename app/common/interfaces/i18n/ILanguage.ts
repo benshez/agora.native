@@ -12,6 +12,9 @@ export interface ITranslation {
   RegisterButtonText: string;
   ForgotPasswordButtonText: string;
   LanguageMenuText: string;
+  HomeMenuItemText: string;
+  AboutMenuItemText: string;
+  LoginMenuItemText: string;
   Greeting: Function;
 }
 
