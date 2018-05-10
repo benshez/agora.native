@@ -1,23 +1,22 @@
 import { I18n } from 'i18n-ts';
 
-export interface ILanguage {
+export interface ITranslation {
   AppName: string;
   AppNameUpperCase: string;
   UserRegistrationTitle: string;
   UserLoginTitle: string;
+  UserNameText: string;
+  UserPasswordText: string;
+  UserPasswordConfirmText: string;
   LoginButtonText: string;
   RegisterButtonText: string;
   ForgotPasswordButtonText: string;
+  LanguageMenuText: string;
   Greeting: Function;
 }
 
-export interface ILanguages {
+export interface ILanguage {
   key: string;
   description: string;
-  translations: ILanguage;
+  translation: ITranslation;
 }
-
-// export interface ILanguage {
-//   'en-AU': IMessages;
-//   af: IMessages;
-// }

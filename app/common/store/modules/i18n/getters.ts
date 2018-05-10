@@ -1,5 +1,5 @@
 import { GetterTree } from 'vuex';
 import { IRootState } from '../../../interfaces/store/IRootState';
-import { ILanguage } from '../../../interfaces/i18n/ILanguage';
+import { ITranslation } from '../../../interfaces/i18n/ILanguage';
 
-export const getters: GetterTree<ILanguage, IRootState> = {};
+export const getters: GetterTree<ITranslation, IRootState> = {};

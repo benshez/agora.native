@@ -1,15 +1,15 @@
 import { MutationTree } from 'vuex';
 import * as mutationTypes from '../types';
-import { ILanguage } from '../../../interfaces/i18n/ILanguage';
+import { ITranslation } from '../../../interfaces/i18n/ILanguage';
 
 import { IRootState } from '../../../interfaces/store/IRootState';
 
-export const mutations: MutationTree<ILanguage> = {
-  [mutationTypes.GET_LANGUAGE](state: ILanguage, lang: ILanguage) {
+export const mutations: MutationTree<ITranslation> = {
+  [mutationTypes.GET_LANGUAGE](state: ITranslation, lang: ITranslation) {
     Object.assign(state, lang);
     return lang;
   },
-  [mutationTypes.UPDATE_LANGUAGE](state: ILanguage, lang: ILanguage) {
+  [mutationTypes.UPDATE_LANGUAGE](state: ITranslation, lang: ITranslation) {
     Object.assign(state, lang);
   }
 };

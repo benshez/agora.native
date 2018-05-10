@@ -1,6 +1,6 @@
 import Vue = require('nativescript-vue');
 import platformModule = require('tns-core-modules/platform');
-import store from './common/store';
+import store from './common/store/modules';
 import routes from './system/routes/router';
 import { AgoraLodash } from './common/system/utilities/AgoraLodash';
 
