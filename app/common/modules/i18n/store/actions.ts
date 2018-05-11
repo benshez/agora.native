@@ -1,7 +1,8 @@
 import { AxiosResponse, AxiosError } from 'axios';
 import { ActionTree } from 'vuex';
 import _ from 'lodash';
-import { ILanguage, ITranslation } from '../interfaces/ILanguage';
+import { ILanguage } from '../interfaces/ILanguage';
+import { ITranslation } from '../interfaces/ITranslation';
 import { IRootState } from '../../base/interfaces/IRootState';
 import * as mutationTypes from '../../base/store/mutationTypes';
 import { LanguageService } from '../services/LanguageService';

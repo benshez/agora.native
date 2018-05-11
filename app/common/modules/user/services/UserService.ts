@@ -3,7 +3,7 @@ import { ActionContext, Store } from 'vuex';
 import { IUser, IUserByName, IUserByEmail } from '../interfaces/IUser';
 import { IUserState } from '../interfaces/IUserState';
 import { IRootState } from '../../base/interfaces/IRootState';
-import { AgoraConfiguration } from '../../../system/constants/AgoraConfiguration';
+import { AgoraConfiguration } from '../../core/constants/AgoraConfiguration';
 import BaseService from '../../base/services/BaseService';
 
 export class UserService extends BaseService {

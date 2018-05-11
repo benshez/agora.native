@@ -1,5 +1,6 @@
 import _ from 'lodash';
-import { ILanguage, ITranslation } from '../interfaces/ILanguage';
+import { ILanguage } from '../interfaces/ILanguage';
+import { ITranslation } from '../interfaces/ITranslation';
 import { en } from '../../i18n/en';
 import { af } from '../../i18n/af';
 

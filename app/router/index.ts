@@ -1,7 +1,7 @@
 import Vue = require('nativescript-vue');
 import VueRouter from 'vue-router';
 
-import { AppRoutes } from '../../views';
+import { AppRoutes } from '../views';
 
 Vue.use(VueRouter);
 

@@ -1,7 +1,7 @@
 import Vue = require('nativescript-vue');
 import platformModule = require('tns-core-modules/platform');
-import store from './common/store/modules';
-import routes from './system/routes/router';
+import store from './store';
+import routes from './router';
 import { AgoraLodash } from './common/system/utilities/AgoraLodash';
 
 Vue.config.silent = false;
