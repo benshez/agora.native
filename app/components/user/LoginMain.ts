@@ -7,9 +7,12 @@ import {
 } from 'tns-core-modules/connectivity';
 import { mapState } from 'vuex';
 import { AgoraConfiguration } from '../../common/system/constants/AgoraConfiguration';
-import * as mutationTypes from '../../common/store/modules/types';
-import { IUserByEmail, IUserByName } from '../../common/interfaces/user/IUser';
-import { IRootState } from '../../common/interfaces/store/IRootState';
+import * as mutationTypes from '../../common/modules/base/store/mutationTypes';
+import {
+  IUserByEmail,
+  IUserByName
+} from '../../common/modules/user/interfaces/IUser';
+import { IRootState } from '../../common/modules/base/interfaces/IRootState';
 
 export const LoginMain = {
   name: 'login-main',
