@@ -1,6 +1,6 @@
 const tokenKey = 'token';
 
-export default class BaseService {
+export class BaseService {
   constructor() {}
 
   getHeaders(toAppend = {}) {

@@ -1,8 +1,5 @@
 import _ from 'lodash';
-import { ILanguage } from '../interfaces/ILanguage';
-import { ITranslation } from '../interfaces/ITranslation';
-import { en } from '../../i18n/en';
-import { af } from '../../i18n/af';
+import { ITranslation, ILanguage, en, af } from '../';
 
 export class LanguageService {
   public GET_LANGUAGES(): Array<ILanguage> {

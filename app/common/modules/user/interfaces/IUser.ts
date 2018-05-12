@@ -22,13 +22,3 @@ export interface IUser {
   error: boolean;
   message: string;
 }
-
-export interface IUserByName {
-  username: string;
-  password: string;
-}
-
-export interface IUserByEmail {
-  email: string;
-  password: string;
-}

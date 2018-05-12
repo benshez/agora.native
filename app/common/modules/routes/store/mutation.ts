@@ -1,8 +1,8 @@
 import { MutationTree } from 'vuex';
 import _ from 'lodash';
 import * as mutationTypes from '../../base/store/mutationTypes';
-import { IRoute } from '../interfaces/IRoute';
-import { IRootState } from '../../base/interfaces/IRootState';
+import { IRoute } from '../';
+import { IRootState } from '../../base/';
 
 export const mutations: MutationTree<Array<IRoute>> = {
   [mutationTypes.GET_ROUTES](state: Array<IRoute>, lang: IRoute) {

@@ -1,9 +1,7 @@
 import { AxiosResponse, AxiosError } from 'axios';
 import { ActionTree } from 'vuex';
-import { IUser, IUserByName, IUserByEmail } from '../interfaces/IUser';
-import { IUserState } from '../interfaces/IUserState';
-import { UserService } from '../services/UserService';
-import { IRootState } from '../../base/interfaces/IRootState';
+import { IUser, IUserByEmail, UserService } from '../';
+import { IRootState } from '../../base/';
 import * as mutationTypes from '../../base/store/mutationTypes';
 import { state } from './state';
 

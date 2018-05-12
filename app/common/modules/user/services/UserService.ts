@@ -1,14 +1,17 @@
 import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
 import { ActionContext, Store } from 'vuex';
-import { IUser, IUserByName, IUserByEmail } from '../interfaces/IUser';
-import { IUserState } from '../interfaces/IUserState';
-import { IRootState } from '../../base/interfaces/IRootState';
+import { IUser, IUserByEmail } from '../';
+import { IRootState } from '../../base';
 import { AgoraConfiguration } from '../../core/constants/AgoraConfiguration';
-import BaseService from '../../base/services/BaseService';
+import { BaseService } from '../../base/';
 
 export class UserService extends BaseService {
   private user: IUser;
-  private config: AxiosRequestConfig = { headers: this.getHeaders() };
+  private config: AxiosRequestConfig = { headers: super.getHeaders() };
+
+  constructor() {
+    super();
+  }
 
   GET_USER_BY_EMAIL(user: IUserByEmail): Promise<any> {
     this.config.data = JSON.stringify(user);

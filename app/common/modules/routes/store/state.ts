@@ -1,4 +1,4 @@
-import { IRoute } from '../interfaces/IRoute';
+import { IRoute } from '../';
 
 export const state: Array<IRoute> = [
   {

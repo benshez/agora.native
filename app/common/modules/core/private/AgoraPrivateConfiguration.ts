@@ -1,7 +1,4 @@
-export interface IAPIKeys {
-  MAP_BOX_API_KEY?: string;
-}
-
+import { IAPIKeys } from '../';
 export class AgoraPrivateConfiguration {
   public static API_KEYS: IAPIKeys = {
     MAP_BOX_API_KEY:

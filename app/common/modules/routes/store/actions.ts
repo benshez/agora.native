@@ -1,9 +1,8 @@
 import { AxiosResponse, AxiosError } from 'axios';
 import { ActionTree } from 'vuex';
-import { IRoute } from '../interfaces/IRoute';
-import { IRootState } from '../../base/interfaces/IRootState';
+import { IRoute, RouteService } from '../';
+import { IRootState } from '../../base/';
 import * as mutationTypes from '../../base/store/mutationTypes';
-import { RouteService } from '../services/RouteService';
 
 export const actions: ActionTree<Array<IRoute>, IRootState> = {
   [mutationTypes.GET_ROUTES]({ commit }, routes: string) {

@@ -1,6 +1,6 @@
 import { MutationTree } from 'vuex';
 import * as mutationTypes from '../../base/store/mutationTypes';
-import { ITranslation } from '../interfaces/ITranslation';
+import { ITranslation } from '../';
 
 export const mutations: MutationTree<ITranslation> = {
   [mutationTypes.GET_LANGUAGE](state: ITranslation, lang: ITranslation) {

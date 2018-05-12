@@ -1,5 +1,5 @@
 import { GetterTree } from 'vuex';
-import { IRootState } from '../../base/interfaces/IRootState';
-import { IRoute } from '../interfaces/IRoute';
+import { IRootState } from '../../base/';
+import { IRoute } from '../';
 
 export const getters: GetterTree<Array<IRoute>, IRootState> = {};

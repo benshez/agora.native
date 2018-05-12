@@ -1,30 +1,10 @@
-import { AgoraPrivateConfiguration } from '../private/AgoraPrivateConfiguration';
-export interface IApplicationRoutes {
-  LOGIN_ROUTE: string;
-  ADD_USER_ROUTE: string;
-}
-export interface IAppSettings {
-  API: string;
-  APP_NAME: string;
-  APP_NAME_TO_UPPER: string;
-  APP_ROUTES: IApplicationRoutes;
-  STORE_NAMESPACED: boolean;
-  STORE_STRICT_MODE: boolean;
-}
-export interface IMapBoxStyles {
-  TRAFFIC_DAY: string;
-  TRAFFIC_NIGHT: string;
-  SATELLITE_STREETS: string;
-  SATELLITE: string;
-  STREET: string;
-  DARK: string;
-  LIGHT: string;
-  OUTDOORS: string;
-}
-export interface IMapBoxSettings {
-  MAPBOX_ACCESS_TOKEN: string;
-  MAPBOX_MAP_STYLES: IMapBoxStyles;
-}
+import {
+  IAppSettings,
+  IMapBoxSettings,
+  IGlobalEvents,
+  AgoraPrivateConfiguration
+} from '../';
+
 export class AgoraConfiguration {
   public static ENVIRONMENT(): string {
     return process.env.NODE_ENV;
@@ -47,6 +27,10 @@ export class AgoraConfiguration {
     if (this.IS_TEST_ENVIRONMENT()) return 'http://192.168.1.14:8000/api/v1';
     if (this.IS_DEV_ENVIRONMENT()) return 'http://agora.api:8000/api/v1';
     return '';
+  }
+
+  public static APP_GLOBAL_EVENTS(): IGlobalEvents {
+    return { UPDATE_LANGUAGE_EVENT: 'UPDATE_LANGUAGE_EVENT' };
   }
 
   public static APP_SETTINGS: IAppSettings = {

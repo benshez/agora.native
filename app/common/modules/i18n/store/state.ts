@@ -1,4 +1,4 @@
-import { ITranslation } from '../interfaces/ITranslation';
+import { ITranslation } from '../';
 import { en } from '../';
 
 export const state: ITranslation = {

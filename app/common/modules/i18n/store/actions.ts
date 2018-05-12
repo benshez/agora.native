@@ -1,11 +1,9 @@
 import { AxiosResponse, AxiosError } from 'axios';
 import { ActionTree } from 'vuex';
 import _ from 'lodash';
-import { ILanguage } from '../interfaces/ILanguage';
-import { ITranslation } from '../interfaces/ITranslation';
-import { IRootState } from '../../base/interfaces/IRootState';
+import { ILanguage, ITranslation, LanguageService } from '../';
+import { IRootState } from '../../base/';
 import * as mutationTypes from '../../base/store/mutationTypes';
-import { LanguageService } from '../services/LanguageService';
 
 export const actions: ActionTree<ITranslation, IRootState> = {
   [mutationTypes.GET_LANGUAGE]({ commit }, lang: string) {

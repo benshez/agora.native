@@ -1,4 +1,4 @@
-import { ILanguage } from './interfaces/ILanguage';
+import { ILanguage } from './';
 
 export const af: ILanguage = {
   key: 'af',
