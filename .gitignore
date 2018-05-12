@@ -2,7 +2,7 @@
 app/**/*.js
 
 # All private
-app/common/system/private/**/*.ts
+app/common/modules/core/private/**/*.ts
 
 node_modules
 platforms
