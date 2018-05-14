@@ -58,4 +58,11 @@ export class AgoraConfiguration {
       OUTDOORS: 'mapbox://styles/mapbox/outdoors-v10'
     }
   };
+
+  public static DEBUG = {
+    LEVEL_1: false, // .info only
+    LEVEL_2: false, // .warn only
+    LEVEL_3: false, // .error only
+    LEVEL_4: false // .log + all the above
+  };
 }
