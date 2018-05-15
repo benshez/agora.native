@@ -30,7 +30,7 @@ export class AgoraConfiguration {
   }
 
   public static APP_GLOBAL_EVENTS(): IGlobalEvents {
-    return { UPDATE_LANGUAGE_EVENT: 'UPDATE_LANGUAGE_EVENT' };
+    return { TOGGLE_LOGIN_COMPONENTS: 'TOGGLE_LOGIN_COMPONENTS' };
   }
 
   public static APP_SETTINGS: IAppSettings = {

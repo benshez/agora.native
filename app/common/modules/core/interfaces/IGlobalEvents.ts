@@ -1,3 +1,3 @@
 export interface IGlobalEvents {
-  UPDATE_LANGUAGE_EVENT: string;
+  TOGGLE_LOGIN_COMPONENTS: string;
 }
