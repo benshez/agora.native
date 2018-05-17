@@ -5,3 +5,5 @@ export { IUser, IUserByEmail, IUserByName };
 
 import { UserService } from './services/UserService';
 export { UserService };
+
+export { state as UserState } from './store/state';

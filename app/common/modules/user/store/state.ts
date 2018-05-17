@@ -21,6 +21,7 @@ export const state: IUser = {
   abn: '',
   token_char: '',
   token_expiry: '',
+  password: '',
   error: false,
   message: ''
 };

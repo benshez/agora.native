@@ -19,6 +19,7 @@ export interface IUser {
   abn: string;
   token_char: string;
   token_expiry: string;
+  password: string;
   error: boolean;
   message: string;
 }
