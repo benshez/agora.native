@@ -1,9 +1,8 @@
-import { IUser } from './interfaces/IUser';
-import { IUserByEmail } from './interfaces/IUserByEmail';
-import { IUserByName } from './interfaces/IUserByName';
-export { IUser, IUserByEmail, IUserByName };
+export { IUserByEmail } from './interfaces/IUserByEmail';
+export { IUserByName } from './interfaces/IUserByName';
+export { IUser } from './interfaces/IUser';
+export { IUserRoles } from './interfaces/IUserRoles';
 
-import { UserService } from './services/UserService';
-export { UserService };
+export { UserService } from './services/UserService';
 
 export { state as UserState } from './store/state';

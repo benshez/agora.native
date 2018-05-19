@@ -5,6 +5,9 @@ export interface ITranslation {
   UserRegistrationTitle: string;
   UserLoginTitle: string;
   UserNameText: string;
+  UserSurnameText: string;
+  UserEmailText: string;
+  UserRoleText: string;
   UserPasswordText: string;
   UserPasswordConfirmText: string;
   LoginButtonText: string;
@@ -14,5 +17,5 @@ export interface ITranslation {
   HomeMenuItemText: string;
   AboutMenuItemText: string;
   LoginMenuItemText: string;
-  Greeting: Function;
+  Greeting: (name: string) => string;
 }

@@ -39,7 +39,8 @@ export class AgoraConfiguration {
     APP_NAME_TO_UPPER: 'AGORA',
     APP_ROUTES: {
       LOGIN_ROUTE: `${AgoraConfiguration.APP_API()}/user/login`,
-      ADD_USER_ROUTE: `${AgoraConfiguration.APP_API()}/user`
+      ADD_USER_ROUTE: `${AgoraConfiguration.APP_API()}/user`,
+      GET_USER_ROLES_ROUTE: `${AgoraConfiguration.APP_API()}/roles/`
     },
     STORE_NAMESPACED: true,
     STORE_STRICT_MODE: false

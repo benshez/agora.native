@@ -32,4 +32,13 @@ export class UserService extends BaseService {
       this.config
     );
   }
+
+  GET_ALL_USER_ROLES(offset?: number): Promise<any> {
+    this.config.data = JSON.stringify(10);
+
+    return axios.get(
+      `${AgoraConfiguration.APP_SETTINGS.APP_ROUTES.GET_USER_ROLES_ROUTE +
+        this.config.data}`
+    );
+  }
 }

@@ -1,6 +1,6 @@
 import { AxiosResponse, AxiosError } from 'axios';
 import { ActionTree } from 'vuex';
-import { IUser, IUserByEmail, UserService } from '../';
+import { IUser, IUserRoles, IUserByEmail, UserService } from '../';
 import { IRootState } from '../../base/';
 import * as mutationTypes from '../../base/store/mutationTypes';
 import { state } from './state';
@@ -31,6 +31,24 @@ export const actions: ActionTree<IUser, IRootState> = {
         user.error = true;
         user.message = error.message;
         commit(mutationTypes.ADD_USER, user);
+      });
+  },
+
+  [mutationTypes.GET_ALL_USER_ROLES]() {
+    new UserService()
+      .GET_ALL_USER_ROLES()
+      .then((response: AxiosResponse) => {
+        debugger;
+        return response.data as IUserRoles;
+      })
+      .catch(error => {
+        const roles: IUserRoles = {
+          id: null,
+          role: '',
+          error: true,
+          message: error.message
+        };
+        return roles;
       });
   }
 };
