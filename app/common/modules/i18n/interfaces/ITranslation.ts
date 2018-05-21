@@ -8,6 +8,7 @@ export interface ITranslation {
   UserSurnameText: string;
   UserEmailText: string;
   UserRoleText: string;
+  UserABNText: string;
   UserPasswordText: string;
   UserPasswordConfirmText: string;
   LoginButtonText: string;

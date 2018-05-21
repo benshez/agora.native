@@ -11,6 +11,7 @@ export const af: ILanguage = {
     UserSurnameText: 'User Surname',
     UserEmailText: 'User Email',
     UserRoleText: 'Type of User',
+    UserABNText: 'ABN (optional)',
     UserPasswordText: 'Password',
     UserPasswordConfirmText: 'Confirm Password',
     UserLoginTitle: 'Gebruiker Login',
