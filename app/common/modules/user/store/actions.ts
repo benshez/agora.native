@@ -38,7 +38,6 @@ export const actions: ActionTree<IUser, IRootState> = {
     new UserService()
       .GET_ALL_USER_ROLES()
       .then((response: AxiosResponse) => {
-        debugger;
         return response.data as IUserRoles;
       })
       .catch(error => {
