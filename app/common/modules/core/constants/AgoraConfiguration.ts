@@ -23,9 +23,9 @@ export class AgoraConfiguration {
   }
 
   public static APP_API(): string {
-    if (this.IS_LIVE_ENVIRONMENT()) return 'http://192.168.1.14:8000/api/v1';
-    if (this.IS_TEST_ENVIRONMENT()) return 'http://192.168.1.14:8000/api/v1';
-    if (this.IS_DEV_ENVIRONMENT()) return 'http://agora.api:8000/api/v1';
+    if (this.IS_LIVE_ENVIRONMENT()) return 'http://192.168.1.14:8000/api/1';
+    if (this.IS_TEST_ENVIRONMENT()) return 'http://192.168.1.14:8000/api/1';
+    if (this.IS_DEV_ENVIRONMENT()) return 'http://agora.api:8000/api/1';
     return '';
   }
 
